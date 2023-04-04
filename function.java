@@ -96,23 +96,23 @@ public class function {
         return resultHset;
     }
 
-    public static Boolean checkRam(Map<String, String> mapFilter, Notebook item) {
-        if (mapFilter.containsKey("RAM")) {
-            return Integer.parseInt(mapFilter.get("RAM")) <= Integer.parseInt(item.getRAMSize());
+    public static Boolean checkRam(Map<String, String> ramFilter, Notebook item) {
+        if (ramFilter.containsKey("RAM")) {
+            return Integer.parseInt(ramFilter.get("RAM")) <= Integer.parseInt(item.getRAMSize());
         }
         return true;
     }
 
-    public static Boolean checkHard(Map<String, String> mapFilter, Notebook item) {
-        if (mapFilter.containsKey("HARD")) {
-            return mapFilter.get("HARD").equals(item.getHardDvc());
+    public static Boolean checkHard(Map<String, String> hardFilter, Notebook item) {
+        if (hardFilter.containsKey("HARD")) {
+            return hardFilter.get("HARD").equals(item.getHardDvc());
         }
         return true;
     }
 
-    public static Boolean checkOs(Map<String, String> mapFilter, Notebook item) {
-        if (mapFilter.containsKey("OS")) {
-            return mapFilter.get("OS").equals(item.getOsVersion());
+    public static Boolean checkOs(Map<String, String> osFilter, Notebook item) {
+        if (osFilter.containsKey("OS")) {
+            return osFilter.get("OS").equals(item.getOsVersion());
         }
         return true;
     }
